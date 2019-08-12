@@ -14,6 +14,7 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    __DEV__: true,
   },
   parserOptions: {
     ecmaFeatures: {
@@ -35,5 +36,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     camelcase: 'off',
     'import/prefer-default-export': 'off',
+    'no-console': 'off',
   },
 };

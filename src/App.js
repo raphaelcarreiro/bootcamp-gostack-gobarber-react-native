@@ -1,14 +1,11 @@
-import React, { Fragment } from 'react';
-import { StatusBar } from 'react-native';
-import Routes from './routes';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import createRouter from './routes';
 
-const App = () => {
-  return (
-    <Fragment>
-      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
-      <Routes />
-    </Fragment>
-  );
-};
+function App() {
+  const signed = useSelector(state => state.auth.signed);
+  const Routes = createRouter(signed);
+  return <Routes />;
+}
 
 export default App;
