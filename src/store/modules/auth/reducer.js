@@ -38,11 +38,7 @@ function auth(state = INITIAL_STATE, action) {
       };
     }
     case '@auth/SIGN_OUT': {
-      return {
-        ...state,
-        token: null,
-        signed: false,
-      };
+      return INITIAL_STATE;
     }
     default:
       return state;
